@@ -23,9 +23,9 @@ class Program
         if (tab.Length > 0)
         {
             double srednia = 0;
-            for (int i = 0; i < tab.Length; i++)
+            for (int j = 0; j < tab.Length; j++)
             {
-                srednia += tab[i];
+                srednia += tab[j];
             }
             return srednia / tab.Length;
         }
