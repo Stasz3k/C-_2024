@@ -1,6 +1,7 @@
 ﻿
 class Program
 {
+
     // Statyczna metoda zwracająca wyliczony max z tablicy int
     static double GetMax(int[] tab)
     {
@@ -15,6 +16,16 @@ class Program
             return maxValue;
         }
         else throw new ArgumentException("Tablica musi zawierac elementy.", nameof(tab));
+
+    // Statyczna metoda zwracająca wyliczoną średnią z tablicy int
+    static double GetAverage(int[] tab)
+    {
+        double average = 0;
+        for (int i = 0; i < tab.Length; i++)
+        {
+            average += tab[i];
+        }
+        return average / tab.Length;
     }
 
     static void Main(string[] args)
@@ -23,5 +34,8 @@ class Program
 
         double maxValue = GetMax(tablica);
         Console.WriteLine("Max z tablicy: " + maxValue);
+
+        double srednia = GetAverage(tablica);
+        Console.WriteLine("Średnia z tablicy: " + srednia);
     }
 }
