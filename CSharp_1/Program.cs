@@ -16,7 +16,7 @@ class Program
             return maxValue;
         }
         else throw new ArgumentException("Tablica musi zawierac elementy.", nameof(tab));
-
+    }
     // Statyczna metoda zwracająca wyliczoną średnią z tablicy int
     static double GetAverage(int[] tab)
     {
