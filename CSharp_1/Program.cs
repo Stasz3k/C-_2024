@@ -20,12 +20,16 @@ class Program
     // Statyczna metoda zwracająca wyliczoną średnią z tablicy int
     static double GetAverage(int[] tab)
     {
-        double average = 0;
-        for (int i = 0; i < tab.Length; i++)
+        if (tab.Length > 0)
         {
-            average += tab[i];
+            double average = 0;
+            for (int i = 0; i < tab.Length; i++)
+            {
+                average += tab[i];
+            }
+            return average / tab.Length;
         }
-        return average / tab.Length;
+        else throw new ArgumentException("Tablica musi zawierać elementy.", nameof(tab));
     }
 
     static void Main(string[] args)
